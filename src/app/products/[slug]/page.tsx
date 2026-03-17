@@ -23,6 +23,8 @@ export async function generateMetadata({
     return { title: "Product not found" };
   }
 
+  const ogImage = product.images[0] ?? product.coverImage;
+
   return {
     title: `${product.title} — ${siteConfig.name}`,
     description: product.description,
@@ -34,6 +36,23 @@ export async function generateMetadata({
       description: product.description,
       type: "article",
       url: `${siteConfig.url}/products/${product.slug}`,
+      images: [
+        {
+          url: ogImage,
+          alt: product.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.title,
+      description: product.description,
+      images: [
+        {
+          url: ogImage,
+          alt: product.title,
+        },
+      ],
     },
   };
 }

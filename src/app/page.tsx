@@ -3,7 +3,7 @@ import { Gallery } from "@/components/gallery/Gallery"
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <section id="gallery" className="py-16">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
@@ -14,6 +14,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   )
 }

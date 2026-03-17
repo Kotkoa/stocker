@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { TeamSection } from "@/components/about/TeamSection";
-import { ContactSection } from "@/components/about/ContactSection";
 
 export const metadata: Metadata = {
   title: "About",
@@ -10,9 +9,6 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
-      <TeamSection />
-      <ContactSection />
-    </main>
+    <TeamSection />
   );
 }

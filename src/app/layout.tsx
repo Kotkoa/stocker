@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased min-h-screen flex flex-col`}>
         <JotaiProvider>
           <script
             type="application/ld+json"
@@ -68,7 +68,7 @@ export default function RootLayout({
           />
           <Header />
           <MobileMenu />
-          {children}
+          <main className="flex-1">{children}</main>
           <Footer />
         </JotaiProvider>
         <Analytics />

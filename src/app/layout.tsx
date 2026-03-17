@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     "theme-color": "#8c7a6b",
     "msapplication-TileColor": "#8c7a6b",
   },
+  alternates: {
+    canonical: siteConfig.url,
+  },
   appleWebApp: {
     title: siteConfig.name,
     statusBarStyle: "default",

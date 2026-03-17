@@ -6,6 +6,7 @@ import { getCategoryLabel } from "@/data/categories";
 import { ProductImageGallery } from "@/components/product/ProductImageGallery";
 import { BuyLinks } from "@/components/product/BuyLinks";
 import { ShareButtons } from "@/components/product/ShareButtons";
+import { RelatedProducts } from "@/components/product/RelatedProducts";
 
 type ProductDetailProps = {
   product: Product;
@@ -38,6 +39,8 @@ export function ProductDetail({ product }: ProductDetailProps) {
           </div>
         </div>
       </div>
+
+      <RelatedProducts slug={product.slug} />
     </Container>
   );
 }

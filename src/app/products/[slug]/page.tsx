@@ -26,10 +26,13 @@ export async function generateMetadata({
   return {
     title: `${product.title} — ${siteConfig.name}`,
     description: product.description,
+    alternates: {
+      canonical: `${siteConfig.url}/products/${product.slug}`,
+    },
     openGraph: {
       title: product.title,
       description: product.description,
-      type: "website",
+      type: "article",
       url: `${siteConfig.url}/products/${product.slug}`,
     },
   };

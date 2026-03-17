@@ -20,6 +20,7 @@ export function MarketplaceLinks({
           title={marketplace.name}
           className="opacity-60 transition-opacity hover:opacity-100"
         >
+          {/* eslint-disable-next-line @next/next/no-img-element -- small SVG icons don't benefit from image optimization */}
           <img
             src={marketplace.icon}
             alt={marketplace.name}

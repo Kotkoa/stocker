@@ -8,7 +8,6 @@ export function getOrganizationJsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    email: siteConfig.email,
     logo: `${siteConfig.url}/og-default.jpg`,
   };
 }

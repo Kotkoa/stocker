@@ -1,4 +1,5 @@
-import { siteConfig } from "@/data/site";
+import { socialLinks } from "@/data/site";
+import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
 
 export function ContactSection() {
   return (
@@ -7,14 +8,11 @@ export function ContactSection() {
         <h2 className="text-2xl font-semibold">Get in Touch</h2>
         <p className="mt-4 text-muted max-w-lg mx-auto">
           Have a question about our products or interested in collaboration?
-          We'd love to hear from you.
+          Reach out to us on any of these platforms.
         </p>
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="mt-6 inline-block text-lg font-medium text-foreground border-b border-foreground pb-1 hover:text-accent hover:border-accent transition-colors"
-        >
-          {siteConfig.email}
-        </a>
+        <div className="mt-6 flex justify-center">
+          <MarketplaceLinks iconSize={28} />
+        </div>
       </div>
     </section>
   );

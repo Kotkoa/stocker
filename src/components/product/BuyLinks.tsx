@@ -31,6 +31,7 @@ export function BuyLinks({ links }: BuyLinksProps) {
             >
               {marketplace ? (
                 <>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- small SVG icons */}
                   <img
                     src={marketplace.icon}
                     alt=""

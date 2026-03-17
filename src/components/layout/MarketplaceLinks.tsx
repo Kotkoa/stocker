@@ -1,4 +1,5 @@
 import { marketplaces } from '@/data/marketplaces'
+import { assetPath } from '@/lib/assets'
 
 interface MarketplaceLinksProps {
   className?: string
@@ -22,7 +23,7 @@ export function MarketplaceLinks({
         >
           {/* eslint-disable-next-line @next/next/no-img-element -- small SVG icons don't benefit from image optimization */}
           <img
-            src={marketplace.icon}
+            src={assetPath(marketplace.icon)}
             alt={marketplace.name}
             width={iconSize}
             height={iconSize}

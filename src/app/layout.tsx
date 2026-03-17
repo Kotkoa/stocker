@@ -31,13 +31,37 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [{ url: siteConfig.ogImage }],
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Kotkoa Studio — Watercolor illustrations, floral patterns, photo bundles & mockups",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.ogImage],
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Kotkoa Studio — Watercolor illustrations, floral patterns, photo bundles & mockups",
+      },
+    ],
+  },
+  other: {
+    "theme-color": "#8c7a6b",
+    "msapplication-TileColor": "#8c7a6b",
+  },
+  appleWebApp: {
+    title: siteConfig.name,
+    statusBarStyle: "default",
+    capable: true,
   },
 };
 

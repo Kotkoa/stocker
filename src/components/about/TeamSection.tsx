@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/assets";
+
 export function TeamSection() {
   return (
     <section className="py-16">
@@ -5,7 +7,7 @@ export function TeamSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="overflow-hidden rounded-lg">
             <img
-              src="/images/team.jpg"
+              src={assetPath("/images/team.jpg")}
               alt="Andrey & Olesia — Kotkoa Studio"
               className="aspect-4/3 w-full object-cover"
             />

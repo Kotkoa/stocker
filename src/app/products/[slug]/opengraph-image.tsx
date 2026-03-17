@@ -45,8 +45,8 @@ export default async function Image({
     product.category
 
   const shortDescription =
-    product.description.length > 120
-      ? `${product.description.slice(0, 120)}...`
+    product.description.length > 140
+      ? `${product.description.slice(0, 140)}...`
       : product.description
 
   return new ImageResponse(
@@ -57,54 +57,158 @@ export default async function Image({
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          fontFamily: "sans-serif",
-          padding: 80,
+          position: "relative",
+          overflow: "hidden",
         }}
       >
         <div
           style={{
-            fontSize: 20,
-            color: "#8c7a6b",
-            textTransform: "uppercase",
-            letterSpacing: 4,
+            position: "absolute",
+            top: -100,
+            right: -100,
+            width: 400,
+            height: 400,
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle, rgba(140,122,107,0.1) 0%, transparent 70%)",
+            display: "flex",
           }}
-        >
-          {categoryLabel}
-        </div>
+        />
+
         <div
           style={{
-            fontSize: 56,
-            fontWeight: 600,
-            color: "#1a1a1a",
-            marginTop: 20,
-            textAlign: "center",
-            lineHeight: 1.2,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 4,
+            background:
+              "linear-gradient(90deg, #8c7a6b 0%, #b8a898 50%, #8c7a6b 100%)",
+            display: "flex",
           }}
-        >
-          {product.title}
-        </div>
+        />
+
         <div
           style={{
-            fontSize: 24,
-            color: "#6b6b6b",
-            marginTop: 30,
-            textAlign: "center",
-            maxWidth: 800,
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+            padding: "56px 80px",
+            justifyContent: "space-between",
           }}
         >
-          {shortDescription}
-        </div>
-        <div
-          style={{
-            fontSize: 18,
-            color: "#8c7a6b",
-            marginTop: 40,
-          }}
-        >
-          kotkoa.com
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+              }}
+            >
+              <div
+                style={{
+                  width: 24,
+                  height: 2,
+                  background: "#8c7a6b",
+                  display: "flex",
+                }}
+              />
+              <div
+                style={{
+                  fontSize: 15,
+                  color: "#8c7a6b",
+                  textTransform: "uppercase",
+                  letterSpacing: 5,
+                  fontFamily: "sans-serif",
+                }}
+              >
+                {categoryLabel}
+              </div>
+            </div>
+
+            <div
+              style={{
+                fontSize: 52,
+                fontWeight: 700,
+                color: "#1a1a1a",
+                marginTop: 28,
+                fontFamily: "sans-serif",
+                lineHeight: 1.15,
+                letterSpacing: -0.5,
+                maxWidth: 900,
+              }}
+            >
+              {product.title}
+            </div>
+
+            <div
+              style={{
+                fontSize: 22,
+                color: "#6b6b6b",
+                marginTop: 28,
+                fontFamily: "sans-serif",
+                lineHeight: 1.5,
+                maxWidth: 800,
+              }}
+            >
+              {shortDescription}
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+              }}
+            >
+              <div
+                style={{
+                  width: 32,
+                  height: 32,
+                  borderRadius: "50%",
+                  background: "#8c7a6b",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#ffffff",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  fontFamily: "sans-serif",
+                }}
+              >
+                K
+              </div>
+              <div
+                style={{
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: "#1a1a1a",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                Kotkoa Studio
+              </div>
+            </div>
+
+            <div
+              style={{
+                fontSize: 14,
+                color: "#b8a898",
+                letterSpacing: 3,
+                fontFamily: "sans-serif",
+              }}
+            >
+              kotkoa.com
+            </div>
+          </div>
         </div>
       </div>
     ),

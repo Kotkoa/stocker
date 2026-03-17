@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site";
 import { Header } from "@/components/layout/Header";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Footer } from "@/components/layout/Footer";
+import { JotaiProvider } from "@/components/JotaiProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -46,10 +47,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <Header />
-        <MobileMenu />
-        {children}
-        <Footer />
+        <JotaiProvider>
+          <Header />
+          <MobileMenu />
+          {children}
+          <Footer />
+        </JotaiProvider>
       </body>
     </html>
   );

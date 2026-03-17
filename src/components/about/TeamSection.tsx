@@ -1,4 +1,3 @@
-import { assetPath } from "@/lib/assets";
 
 export function TeamSection() {
   return (
@@ -7,7 +6,7 @@ export function TeamSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="overflow-hidden rounded-lg">
             <img
-              src={assetPath("/images/team.jpg")}
+              src="/images/team.jpg"
               alt="Andrey & Olesia — Kotkoa Studio"
               className="aspect-4/3 w-full object-cover"
             />

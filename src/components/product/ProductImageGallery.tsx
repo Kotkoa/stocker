@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { assetPath } from "@/lib/assets";
 
 type ProductImageGalleryProps = {
   images: string[];
@@ -15,7 +14,7 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
     <div className="flex flex-col gap-4">
       <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-foreground/5">
         <img
-          src={assetPath(images[activeIndex])}
+          src={(images[activeIndex])}
           alt={alt}
           className="h-full w-full object-cover"
         />
@@ -35,7 +34,7 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
               }`}
             >
               <img
-                src={assetPath(image)}
+                src={(image)}
                 alt={`${alt} — ${index + 1}`}
                 className="h-20 w-20 object-cover"
               />

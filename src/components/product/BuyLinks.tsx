@@ -1,5 +1,4 @@
 import { marketplaces } from "@/data/marketplaces";
-import { assetPath } from "@/lib/assets";
 
 interface BuyLink {
   marketplace: string;
@@ -34,7 +33,7 @@ export function BuyLinks({ links }: BuyLinksProps) {
                 <>
                   {/* eslint-disable-next-line @next/next/no-img-element -- small SVG icons */}
                   <img
-                    src={assetPath(marketplace.icon)}
+                    src={marketplace.icon}
                     alt=""
                     width={20}
                     height={20}

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
-import { assetPath } from "@/lib/assets";
 
 const categoryLabels: Record<string, string> = {
   watercolor: "Watercolor",
@@ -22,7 +21,7 @@ function ProductCardDefault({ slug, title, coverImage, category }: ProductCardPr
     <Link href={`/products/${slug}`} className="group block">
       <div className="overflow-hidden rounded-lg">
         <img
-          src={assetPath(coverImage)}
+          src={coverImage}
           alt={title}
           className="aspect-4/3 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           loading="lazy"
@@ -41,7 +40,7 @@ function ProductCardFeatured({ slug, title, coverImage, category }: ProductCardP
     <Link href={`/products/${slug}`} className="group block">
       <div className="overflow-hidden rounded-lg">
         <img
-          src={assetPath(coverImage)}
+          src={coverImage}
           alt={title}
           className="aspect-4/3 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           loading="lazy"

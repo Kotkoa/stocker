@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { Footer } from "@/components/layout/Footer";
 import { JotaiProvider } from "@/components/JotaiProvider";
+import { getOrganizationJsonLd } from "@/lib/metadata";
+import { Analytics } from "@/components/Analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -48,11 +50,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <JotaiProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(getOrganizationJsonLd()),
+            }}
+          />
           <Header />
           <MobileMenu />
           {children}
           <Footer />
         </JotaiProvider>
+        <Analytics />
       </body>
     </html>
   );

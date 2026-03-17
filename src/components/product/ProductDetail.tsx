@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Product } from "@/types/product";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
+import { getCategoryLabel } from "@/data/categories";
 import { ProductImageGallery } from "@/components/product/ProductImageGallery";
 import { BuyLinks } from "@/components/product/BuyLinks";
 import { ShareButtons } from "@/components/product/ShareButtons";
@@ -24,7 +25,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
         <ProductImageGallery images={product.images} alt={product.title} />
 
         <div>
-          <Badge>{product.category}</Badge>
+          <Badge>{getCategoryLabel(product.category)}</Badge>
           <h1 className="mt-4 text-3xl font-semibold">{product.title}</h1>
           <p className="mt-4 leading-relaxed text-muted">
             {product.description}

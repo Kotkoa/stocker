@@ -1,3 +1,7 @@
+import type { MarketplaceId } from "@/data/marketplaces"
+
+export type { MarketplaceId } from "@/data/marketplaces"
+
 export type ProductCategory = "watercolor" | "floral-pattern" | "photo-bundle" | "mockup" | "vintage-pattern"
 
 export interface Product {
@@ -14,6 +18,6 @@ export interface Product {
 }
 
 export interface MarketplaceLink {
-  marketplace: string
+  marketplace: MarketplaceId
   url: string
 }

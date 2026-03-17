@@ -1,12 +1,8 @@
 import { marketplaces } from "@/data/marketplaces";
-
-interface BuyLink {
-  marketplace: string;
-  url: string;
-}
+import type { MarketplaceLink } from "@/types/product";
 
 interface BuyLinksProps {
-  links: BuyLink[];
+  links: MarketplaceLink[];
 }
 
 export function BuyLinks({ links }: BuyLinksProps) {
@@ -31,7 +27,6 @@ export function BuyLinks({ links }: BuyLinksProps) {
             >
               {marketplace ? (
                 <>
-                  {/* eslint-disable-next-line @next/next/no-img-element -- small SVG icons */}
                   <img
                     src={marketplace.icon}
                     alt=""

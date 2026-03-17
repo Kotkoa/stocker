@@ -3,8 +3,6 @@ export const siteConfig = {
   description:
     "Creative design studio by Andrey & Olesia specializing in watercolor illustrations, floral patterns, photo bundles, and mockups for digital and print projects.",
   url: "https://kotkoa.com",
-  ogImage: "/og-default.jpg",
-  email: "kotkoa@gmail.com",
   authors: [{ name: "Kotkoa Studio" }],
   creator: "Kotkoa Studio",
   keywords: [

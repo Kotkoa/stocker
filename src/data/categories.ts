@@ -12,3 +12,7 @@ export const categories: Category[] = [
   { value: "mockup", label: "Mockups" },
   { value: "vintage-pattern", label: "Vintage Patterns" },
 ]
+
+export function getCategoryLabel(value: string): string {
+  return categories.find((c) => c.value === value)?.label ?? value
+}

@@ -10,6 +10,7 @@ export function CategoryFilter() {
   return (
     <div className="flex flex-wrap gap-2 justify-center">
       <button
+        type="button"
         onClick={() => setActiveCategory("all")}
         className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
           activeCategory === "all"
@@ -21,6 +22,7 @@ export function CategoryFilter() {
       </button>
       {categories.map((cat) => (
         <button
+          type="button"
           key={cat.value}
           onClick={() => setActiveCategory(cat.value)}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${

@@ -1,13 +1,24 @@
-import { siteConfig } from "@/data/site";
+"use client"
+
+import { useState } from "react"
+import { siteConfig } from "@/data/site"
 
 interface ShareButtonsProps {
-  slug: string;
-  title: string;
+  slug: string
+  title: string
 }
 
 export function ShareButtons({ slug, title }: ShareButtonsProps) {
-  const url = `${siteConfig.url}/products/${slug}`;
-  const pinterestHref = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(title)}`;
+  const [copied, setCopied] = useState(false)
+  const url = `${siteConfig.url}/products/${slug}`
+  const pinterestHref = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(title)}`
+
+  function handleCopyLink() {
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   return (
     <div className="flex flex-row items-center gap-4">
@@ -20,10 +31,9 @@ export function ShareButtons({ slug, title }: ShareButtonsProps) {
       >
         Pin it
       </a>
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        type="button"
+        onClick={handleCopyLink}
         className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-foreground"
       >
         <svg
@@ -41,8 +51,8 @@ export function ShareButtons({ slug, title }: ShareButtonsProps) {
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
         </svg>
-        Link
-      </a>
+        {copied ? "Copied!" : "Link"}
+      </button>
     </div>
-  );
+  )
 }

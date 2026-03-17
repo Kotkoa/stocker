@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/Badge";
-
-const categoryLabels: Record<string, string> = {
-  watercolor: "Watercolor",
-  "floral-pattern": "Floral Patterns",
-  "photo-bundle": "Photo Bundles",
-  mockup: "Mockups",
-  "vintage-pattern": "Vintage Patterns",
-};
+import { getCategoryLabel } from "@/data/categories";
 
 type ProductCardProps = {
   slug: string;
@@ -29,7 +22,7 @@ function ProductCardDefault({ slug, title, coverImage, category }: ProductCardPr
       </div>
       <h3 className="mt-3 text-sm font-medium">{title}</h3>
       <div className="mt-1">
-        <Badge>{categoryLabels[category] ?? category}</Badge>
+        <Badge>{getCategoryLabel(category)}</Badge>
       </div>
     </Link>
   );
@@ -51,7 +44,7 @@ function ProductCardFeatured({ slug, title, coverImage, category }: ProductCardP
         <span className="inline-block size-1.5 rounded-full bg-stone-400" />
       </div>
       <div className="mt-1">
-        <Badge>{categoryLabels[category] ?? category}</Badge>
+        <Badge>{getCategoryLabel(category)}</Badge>
       </div>
     </Link>
   );

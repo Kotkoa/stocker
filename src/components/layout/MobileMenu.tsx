@@ -49,7 +49,7 @@ export function MobileMenu() {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-white"
+      className="fixed inset-0 z-50 bg-background"
       role="dialog"
       aria-modal="true"
       aria-label="Navigation menu"

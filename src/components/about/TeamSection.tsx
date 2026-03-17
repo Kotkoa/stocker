@@ -1,4 +1,3 @@
-
 export function TeamSection() {
   return (
     <section className="py-16">

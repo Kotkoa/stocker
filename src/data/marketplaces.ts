@@ -1,7 +1,9 @@
 import { socialLinks } from "@/data/site";
 
+export type MarketplaceId = "etsy" | "adobe-stock" | "shutterstock" | "creative-market" | "fiverr"
+
 export interface Marketplace {
-  id: string;
+  id: MarketplaceId;
   name: string;
   url: string;
   icon: string;

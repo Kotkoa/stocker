@@ -22,9 +22,9 @@ export const siteConfig = {
 } as const;
 
 export const socialLinks = {
-  etsy: "https://www.etsy.com/shop/KotkoaStudio",
-  adobeStock: "https://stock.adobe.com/contributor/211633547/Kotkoa",
+  etsy: "https://www.etsy.com/shop/Kotkoa",
+  adobeStock: "https://stock.adobe.com/contributor/351400/kotkoa",
   shutterstock: "https://www.shutterstock.com/g/Kotkoa",
-  creativeMarket: "https://creativemarket.com/kotkoa",
-  fiverr: "https://www.fiverr.com/kotkoa",
+  creativeMarket: "https://creativemarket.com/Kotkoa",
+  fiverr: "https://www.fiverr.com/s2/e624e3c618",
 } as const;

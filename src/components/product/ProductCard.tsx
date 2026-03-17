@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ExportedImage from "next-image-export-optimizer";
 import { Badge } from "@/components/ui/Badge";
 
 const categoryLabels: Record<string, string> = {
@@ -21,13 +20,11 @@ function ProductCardDefault({ slug, title, coverImage, category }: ProductCardPr
   return (
     <Link href={`/products/${slug}`} className="group block">
       <div className="overflow-hidden rounded-lg">
-        <ExportedImage
+        <img
           src={coverImage}
           alt={title}
-          width={600}
-          height={450}
           className="aspect-4/3 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          loading="lazy"
         />
       </div>
       <h3 className="mt-3 text-sm font-medium">{title}</h3>
@@ -40,18 +37,19 @@ function ProductCardDefault({ slug, title, coverImage, category }: ProductCardPr
 
 function ProductCardFeatured({ slug, title, coverImage, category }: ProductCardProps) {
   return (
-    <Link href={`/products/${slug}`} className="group block md:col-span-2">
+    <Link href={`/products/${slug}`} className="group block">
       <div className="overflow-hidden rounded-lg">
-        <ExportedImage
+        <img
           src={coverImage}
           alt={title}
-          width={800}
-          height={533}
-          className="aspect-3/2 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-          sizes="(max-width: 768px) 100vw, 66vw"
+          className="aspect-4/3 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          loading="lazy"
         />
       </div>
-      <h3 className="mt-3 text-base font-medium">{title}</h3>
+      <div className="mt-3 flex items-center gap-2">
+        <h3 className="text-base font-medium">{title}</h3>
+        <span className="inline-block size-1.5 rounded-full bg-stone-400" />
+      </div>
       <div className="mt-1">
         <Badge>{categoryLabels[category] ?? category}</Badge>
       </div>

@@ -1,17 +1,13 @@
-import ExportedImage from "next-image-export-optimizer";
-
 export function TeamSection() {
   return (
     <section className="py-16">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-4/3 overflow-hidden rounded-lg">
-            <ExportedImage
+          <div className="overflow-hidden rounded-lg">
+            <img
               src="/images/team.jpg"
               alt="Andrey & Olesia — Kotkoa Studio"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="aspect-4/3 w-full object-cover"
             />
           </div>
           <div>
@@ -36,5 +32,5 @@ export function TeamSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

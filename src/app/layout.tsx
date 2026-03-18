@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     "theme-color": "#8c7a6b",
     "msapplication-TileColor": "#8c7a6b",
   },
+  icons: {
+    icon: "/favicon.ico?v2",
+    apple: "/apple-icon.png?v2",
+  },
   alternates: {
     canonical: siteConfig.url,
   },

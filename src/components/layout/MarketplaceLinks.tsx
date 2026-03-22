@@ -18,7 +18,7 @@ export function MarketplaceLinks({
           target="_blank"
           rel="noopener noreferrer"
           title={marketplace.name}
-          className="opacity-60 transition-opacity hover:opacity-100"
+          className="text-muted-lt transition-opacity opacity-50 hover:opacity-100"
         >
           <img
             src={marketplace.icon}

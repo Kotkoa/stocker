@@ -11,9 +11,14 @@ export function RelatedProducts({ slug }: RelatedProductsProps) {
   if (related.length === 0) return null
 
   return (
-    <section className="mt-16 border-t border-border pt-16">
-      <h2 className="text-xl font-semibold">You may also like</h2>
-      <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+    <section className="mt-[clamp(60px,8vw,100px)] border-t border-border pt-[clamp(60px,8vw,100px)]">
+      <p className="mb-4.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+        Related
+      </p>
+      <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-medium leading-[1.2] mb-10">
+        You may also like
+      </h2>
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
         {related.map((product) => (
           <ProductCard.Default
             key={product.slug}

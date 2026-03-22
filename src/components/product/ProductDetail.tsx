@@ -14,7 +14,7 @@ type ProductDetailProps = {
 
 export function ProductDetail({ product }: ProductDetailProps) {
   return (
-    <Container className="py-12">
+    <Container className="pt-29 pb-[clamp(80px,10vw,130px)]">
       <Link
         href="/"
         className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-foreground"
@@ -27,8 +27,10 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
         <div>
           <Badge>{getCategoryLabel(product.category)}</Badge>
-          <h1 className="mt-4 text-3xl font-semibold">{product.title}</h1>
-          <p className="mt-4 leading-relaxed text-muted">
+          <h1 className="mt-4 font-serif text-[clamp(1.75rem,3vw,2.25rem)] font-medium leading-[1.2]">
+            {product.title}
+          </h1>
+          <p className="mt-4 leading-[1.8] text-muted">
             {product.description}
           </p>
           <div className="mt-8">

@@ -2,14 +2,16 @@ import { type AnchorHTMLAttributes } from "react";
 
 type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
-  variant?: "primary" | "outline";
+  variant?: "primary" | "ghost" | "outline";
 };
 
 const variants = {
   primary:
-    "bg-foreground text-background hover:opacity-90",
+    "bg-foreground text-background border-foreground hover:bg-charcoal-soft hover:border-charcoal-soft hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(61,56,51,0.18)]",
+  ghost:
+    "bg-transparent text-foreground border-border hover:bg-birch hover:border-birch-deep hover:-translate-y-0.5",
   outline:
-    "border border-border text-foreground hover:bg-foreground/5",
+    "bg-transparent text-foreground border-birch-deep hover:bg-birch hover:-translate-y-0.5 hover:shadow-[0_6px_18px_rgba(61,56,51,0.08)]",
 } as const;
 
 export function Button({
@@ -24,7 +26,7 @@ export function Button({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition ${variants[variant]}${className ? ` ${className}` : ""}`}
+      className={`inline-flex items-center gap-2 rounded-full border-[1.5px] px-6.5 py-3.5 text-sm font-semibold tracking-[0.02em] transition-all duration-350 ease-warm ${variants[variant]}${className ? ` ${className}` : ""}`}
       {...rest}
     >
       {children}

@@ -54,8 +54,8 @@ export function MobileMenu() {
       aria-modal="true"
       aria-label="Navigation menu"
     >
-      <div className="flex h-16 items-center justify-between px-6">
-        <span className="text-xl font-semibold tracking-tight text-foreground">
+      <div className="flex h-17 items-center justify-between px-[clamp(20px,4vw,40px)]">
+        <span className="text-[15px] font-bold uppercase tracking-[0.08em] text-foreground">
           kotkoa
         </span>
         <button
@@ -81,20 +81,20 @@ export function MobileMenu() {
         </button>
       </div>
 
-      <nav className="flex flex-col gap-6 px-6 pt-8" aria-label="Mobile navigation">
+      <nav className="flex flex-col gap-6 px-[clamp(20px,4vw,40px)] pt-8" aria-label="Mobile navigation">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             onClick={closeMenu}
-            className="text-2xl font-medium text-foreground"
+            className="font-serif text-2xl font-medium text-foreground"
           >
             {link.label}
           </Link>
         ))}
       </nav>
 
-      <div className="absolute bottom-0 left-0 right-0 border-t border-border px-6 py-6">
+      <div className="absolute bottom-0 left-0 right-0 border-t border-border px-[clamp(20px,4vw,40px)] py-6">
         <MarketplaceLinks />
       </div>
     </div>

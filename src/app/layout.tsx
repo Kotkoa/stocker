@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lora, Nunito_Sans } from "next/font/google";
 import { siteConfig } from "@/data/site";
 import { Header } from "@/components/layout/Header";
 import { MobileMenu } from "@/components/layout/MobileMenu";
@@ -9,8 +9,15 @@ import { getOrganizationJsonLd } from "@/lib/metadata";
 import { Analytics } from "@/components/Analytics";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin", "cyrillic"],
+  style: ["normal", "italic"],
+  weight: ["400", "500"],
+});
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin", "cyrillic"],
 });
 
@@ -38,8 +45,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
   other: {
-    "theme-color": "#8c7a6b",
-    "msapplication-TileColor": "#8c7a6b",
+    "theme-color": "#3D3833",
+    "msapplication-TileColor": "#3D3833",
   },
   icons: {
     icon: "/favicon.ico?v2",
@@ -62,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${lora.variable} ${nunitoSans.variable} antialiased min-h-screen flex flex-col`}>
         <JotaiProvider>
           <script
             type="application/ld+json"

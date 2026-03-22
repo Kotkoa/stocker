@@ -6,7 +6,7 @@ type ContainerProps = {
 export function Container({ children, className }: ContainerProps) {
   return (
     <div
-      className={`mx-auto max-w-(--container-max-width) px-4 sm:px-6 lg:px-8${className ? ` ${className}` : ""}`}
+      className={`mx-auto max-w-max-width px-[clamp(20px,4vw,40px)]${className ? ` ${className}` : ""}`}
     >
       {children}
     </div>

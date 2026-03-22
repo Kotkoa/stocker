@@ -40,25 +40,28 @@ export default function NotFound() {
   const featured = getFeaturedProducts().slice(0, 4)
 
   return (
-    <Container className="py-16">
+    <Container className="pt-29 pb-[clamp(80px,10vw,130px)]">
       <Script id="tumblr-redirects" strategy="beforeInteractive">
         {redirectScript}
       </Script>
 
       <div className="text-center">
-        <h1 className="text-6xl font-semibold text-foreground">404</h1>
+        <h1 className="font-serif text-6xl font-medium text-foreground">404</h1>
         <p className="mt-4 text-lg text-muted">Page not found</p>
         <Link
           href="/"
-          className="mt-8 inline-flex text-sm font-medium text-foreground border-b border-foreground pb-1 hover:text-muted transition-colors"
+          className="mt-8 inline-flex items-center gap-2 rounded-full border-[1.5px] border-border bg-transparent px-6.5 py-3.5 text-sm font-semibold tracking-[0.02em] text-foreground transition-all duration-350 ease-warm hover:bg-birch hover:border-birch-deep hover:-translate-y-0.5"
         >
           Go to gallery
         </Link>
       </div>
 
       {featured.length > 0 && (
-        <section className="mt-16">
-          <h2 className="text-xl font-semibold">Featured products</h2>
+        <section className="mt-[clamp(60px,8vw,100px)]">
+          <p className="mb-4.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+            Featured
+          </p>
+          <h2 className="font-serif text-xl font-medium">Featured products</h2>
           <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
             {featured.map((product) => (
               <ProductCard.Default

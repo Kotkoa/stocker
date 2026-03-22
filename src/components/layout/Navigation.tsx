@@ -12,7 +12,7 @@ export function Navigation() {
         <li key={link.href}>
           <Link
             href={link.href}
-            className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+            className="text-[13px] tracking-[0.02em] text-muted transition-colors hover:text-foreground"
           >
             {link.label}
           </Link>

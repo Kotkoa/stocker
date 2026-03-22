@@ -12,10 +12,10 @@ export function CategoryFilter() {
       <button
         type="button"
         onClick={() => setActiveCategory("all")}
-        className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+        className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-warm ${
           activeCategory === "all"
-            ? "bg-foreground text-background"
-            : "bg-transparent text-muted border border-border hover:text-foreground hover:border-foreground"
+            ? "bg-birch text-foreground"
+            : "bg-transparent text-muted border border-border hover:bg-bg-alt hover:text-foreground"
         }`}
       >
         All
@@ -25,10 +25,10 @@ export function CategoryFilter() {
           type="button"
           key={cat.value}
           onClick={() => setActiveCategory(cat.value)}
-          className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+          className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-warm ${
             activeCategory === cat.value
-              ? "bg-foreground text-background"
-              : "bg-transparent text-muted border border-border hover:text-foreground hover:border-foreground"
+              ? "bg-birch text-foreground"
+              : "bg-transparent text-muted border border-border hover:bg-bg-alt hover:text-foreground"
           }`}
         >
           {cat.label}

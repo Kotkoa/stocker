@@ -10,7 +10,7 @@ export function BuyLinks({ links }: BuyLinksProps) {
 
   return (
     <div>
-      <h3 className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
+      <h3 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted mb-4">
         Buy this product
       </h3>
       <div className="flex flex-col gap-3">
@@ -23,7 +23,7 @@ export function BuyLinks({ links }: BuyLinksProps) {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 w-full px-4 py-3 rounded-lg border border-border text-sm font-medium hover:border-foreground transition-colors"
+              className="flex items-center gap-3 w-full px-5 py-3.5 rounded-[14px] border border-border text-sm font-medium transition-all duration-300 ease-warm hover:border-birch-deep hover:bg-bg-alt hover:-translate-y-0.5"
             >
               {marketplace ? (
                 <>

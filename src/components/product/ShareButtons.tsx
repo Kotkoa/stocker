@@ -22,7 +22,7 @@ export function ShareButtons({ slug, title }: ShareButtonsProps) {
 
   return (
     <div className="flex flex-row items-center gap-4">
-      <span className="text-sm text-muted">Share</span>
+      <span className="text-sm text-muted-lt">Share</span>
       <a
         href={pinterestHref}
         target="_blank"

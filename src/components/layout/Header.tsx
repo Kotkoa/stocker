@@ -1,15 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
 import { MobileMenuButton } from "@/components/layout/MobileMenuButton";
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 48);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 h-16 border-b border-border bg-background/80 backdrop-blur-sm">
-      <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header
+      className={`fixed top-0 z-50 w-full h-17 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/90 backdrop-blur-lg backdrop-saturate-160 border-b border-border shadow-[0_1px_3px_rgba(61,56,51,0.06)]"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex h-full max-w-max-width items-center justify-between px-[clamp(20px,4vw,40px)]">
         <Link
           href="/"
-          className="text-xl font-semibold tracking-tight text-foreground"
+          className="text-[15px] font-bold uppercase tracking-[0.08em] text-foreground"
         >
           kotkoa
         </Link>
@@ -20,7 +39,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex">
-            <MarketplaceLinks />
+            <MarketplaceLinks iconSize={20} />
           </div>
 
           <MobileMenuButton />

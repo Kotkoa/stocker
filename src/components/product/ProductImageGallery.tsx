@@ -12,7 +12,7 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="relative aspect-4/3 overflow-hidden rounded-lg bg-foreground/5">
+      <div className="relative aspect-4/3 overflow-hidden rounded-[14px] bg-bg-alt">
         <img
           src={images[activeIndex]}
           alt={alt}
@@ -27,10 +27,10 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
               type="button"
               onClick={() => setActiveIndex(index)}
               aria-current={index === activeIndex ? "true" : undefined}
-              className={`shrink-0 cursor-pointer overflow-hidden rounded-md border-2 transition-colors ${
+              className={`shrink-0 cursor-pointer overflow-hidden rounded-lg border-2 transition-colors duration-300 ${
                 index === activeIndex
                   ? "border-foreground"
-                  : "border-transparent hover:border-border"
+                  : "border-transparent hover:border-birch-deep"
               }`}
             >
               <img

@@ -38,11 +38,28 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kotkoa Studio — Carefully crafted digital assets: watercolor illustrations, floral patterns, photo bundles, and mockups",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kotkoa Studio — Carefully crafted digital assets",
+      },
+    ],
   },
   other: {
     "theme-color": "#3D3833",

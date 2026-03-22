@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png?v2",
         width: 1200,
         height: 630,
         alt: "Kotkoa Studio — Carefully crafted digital assets: watercolor illustrations, floral patterns, photo bundles, and mockups",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png?v2",
         width: 1200,
         height: 630,
         alt: "Kotkoa Studio — Carefully crafted digital assets",

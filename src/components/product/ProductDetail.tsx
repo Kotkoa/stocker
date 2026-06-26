@@ -34,7 +34,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             {product.description}
           </p>
           <div className="mt-8">
-            <BuyLinks links={product.marketplaceLinks} />
+            <BuyLinks links={product.marketplaceLinks} productSlug={product.slug} />
           </div>
           <div className="mt-8 border-t border-border pt-8">
             <ShareButtons slug={product.slug} title={product.title} />

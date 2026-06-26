@@ -4,6 +4,7 @@ import { getAllSlugs, getProductBySlug } from "@/lib/products";
 import { siteConfig } from "@/data/site";
 import { getBreadcrumbJsonLd, getProductJsonLd } from "@/lib/metadata";
 import { ProductDetail } from "@/components/product/ProductDetail";
+import { ProductViewTracker } from "@/components/analytics/ProductViewTracker";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -79,6 +80,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           __html: JSON.stringify(getBreadcrumbJsonLd(product)),
         }}
       />
+      <ProductViewTracker slug={product.slug} category={product.category} />
       <ProductDetail product={product} />
     </>
   );

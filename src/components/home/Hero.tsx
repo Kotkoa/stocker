@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
 import { siteConfig } from "@/data/site";
 
 export function Hero() {
@@ -22,18 +22,22 @@ export function Hero() {
         </p>
 
         <div className="anim-fade-up anim-delay-4 mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Link
+          <TrackedLink
             href="#gallery"
+            event="cta_click"
+            params={{ cta: "browse_collection", location: "hero" }}
             className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-foreground bg-foreground px-6.5 py-3.5 text-sm font-semibold tracking-[0.02em] text-background transition-all duration-350 ease-warm hover:bg-charcoal-soft hover:border-charcoal-soft hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(61,56,51,0.18)]"
           >
             Browse Collection
-          </Link>
-          <Link
+          </TrackedLink>
+          <TrackedLink
             href="/about"
+            event="cta_click"
+            params={{ cta: "our_story", location: "hero" }}
             className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-border bg-transparent px-6.5 py-3.5 text-sm font-semibold tracking-[0.02em] text-foreground transition-all duration-350 ease-warm hover:bg-birch hover:border-birch-deep hover:-translate-y-0.5"
           >
             Our Story
-          </Link>
+          </TrackedLink>
         </div>
 
         <div className="anim-fade-in anim-delay-5 mt-14 flex flex-wrap items-center justify-center gap-6 text-[13px] text-muted">
@@ -61,7 +65,7 @@ export function Hero() {
         </div>
 
         <div className="anim-fade-in anim-delay-6 mt-8 flex justify-center">
-          <MarketplaceLinks iconSize={22} />
+          <MarketplaceLinks iconSize={22} location="hero" />
         </div>
       </div>
     </section>

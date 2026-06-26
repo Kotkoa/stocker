@@ -39,7 +39,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex">
-            <MarketplaceLinks iconSize={20} />
+            <MarketplaceLinks iconSize={20} location="header" />
           </div>
 
           <MobileMenuButton />

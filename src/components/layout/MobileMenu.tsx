@@ -95,7 +95,7 @@ export function MobileMenu() {
       </nav>
 
       <div className="absolute bottom-0 left-0 right-0 border-t border-border px-[clamp(20px,4vw,40px)] py-6">
-        <MarketplaceLinks />
+        <MarketplaceLinks location="mobile_menu" />
       </div>
     </div>
   );

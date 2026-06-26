@@ -8,7 +8,7 @@ export function TrustSection() {
           Available on
         </p>
         <div className="flex justify-center">
-          <MarketplaceLinks iconSize={32} />
+          <MarketplaceLinks iconSize={32} location="trust_section" />
         </div>
       </div>
     </section>

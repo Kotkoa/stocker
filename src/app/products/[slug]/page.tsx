@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getProductBySlug } from "@/lib/products";
 import { siteConfig } from "@/data/site";
-import { getProductJsonLd } from "@/lib/metadata";
+import { getBreadcrumbJsonLd, getProductJsonLd } from "@/lib/metadata";
 import { ProductDetail } from "@/components/product/ProductDetail";
 
 type ProductPageProps = {
@@ -26,7 +26,7 @@ export async function generateMetadata({
   const ogImage = product.images[0] ?? product.coverImage;
 
   return {
-    title: `${product.title} — ${siteConfig.name}`,
+    title: product.title,
     description: product.description,
     alternates: {
       canonical: `${siteConfig.url}/products/${product.slug}`,
@@ -71,6 +71,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(getProductJsonLd(product)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbJsonLd(product)),
         }}
       />
       <ProductDetail product={product} />

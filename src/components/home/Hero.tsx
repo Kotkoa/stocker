@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
+import { siteConfig } from "@/data/site";
 
 export function Hero() {
   return (
@@ -41,7 +42,7 @@ export function Hero() {
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
               <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
-            25,000+ assets created
+            {siteConfig.stats.assets} assets since {siteConfig.stats.since}
           </span>
           <span className="flex items-center gap-2">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -55,7 +56,7 @@ export function Hero() {
               <circle cx="8.5" cy="8.5" r="1.5" />
               <polyline points="21 15 16 10 5 21" />
             </svg>
-            Available on 5 marketplaces
+            Sold on leading stock marketplaces
           </span>
         </div>
 

@@ -17,6 +17,10 @@ export const siteConfig = {
     "botanical illustrations",
     "design resources",
   ],
+  stats: {
+    assets: "25,000+",
+    since: "2012",
+  },
 } as const;
 
 export const socialLinks = {

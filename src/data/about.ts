@@ -23,6 +23,16 @@ export interface SocialLink {
   url: string
 }
 
+export interface Founder {
+  name: string
+  jobTitle: string
+}
+
+export const founders: Founder[] = [
+  { name: "Andrey", jobTitle: "Co-founder & Developer" },
+  { name: "Olesia", jobTitle: "Co-founder & Illustrator" },
+]
+
 export const aboutHero: AboutHero = {
   heading: "Andrey & Olesia",
   subheading: "The creative duo behind Kotkoa Studio",

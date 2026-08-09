@@ -3,6 +3,7 @@ export const siteConfig = {
   description:
     "Creative design studio by Andrey & Olesia specializing in watercolor illustrations, floral patterns, photo bundles, and mockups for digital and print projects.",
   url: "https://kotkoa.com",
+  shopUrl: "https://shop.kotkoa.com",
   authors: [{ name: "Kotkoa Studio" }],
   creator: "Kotkoa Studio",
   keywords: [
@@ -24,7 +25,7 @@ export const siteConfig = {
 } as const;
 
 export const socialLinks = {
-  etsy: "https://www.etsy.com/shop/Kotkoa",
+  shopify: siteConfig.shopUrl,
   adobeStock: "https://stock.adobe.com/contributor/351400/kotkoa",
   shutterstock: "https://www.shutterstock.com/g/Kotkoa",
   creativeMarket: "https://creativemarket.com/Kotkoa",

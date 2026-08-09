@@ -14,9 +14,13 @@ export function MarketplaceLinks({
   iconSize = 24,
   location = 'unknown',
 }: MarketplaceLinksProps) {
+  const iconMarketplaces = marketplaces.filter(
+    (marketplace) => marketplace.id !== 'shopify'
+  )
+
   return (
     <div className={`flex items-center gap-4 ${className ?? ''}`}>
-      {marketplaces.map((marketplace) => (
+      {iconMarketplaces.map((marketplace) => (
         <a
           key={marketplace.id}
           href={marketplace.url}

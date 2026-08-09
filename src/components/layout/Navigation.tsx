@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { siteConfig } from "@/data/site";
 
 const links = [
-  { href: "/", label: "Products" },
+  { href: "/#gallery", label: "Products" },
   { href: "/about", label: "About" },
 ] as const;
 
@@ -18,6 +19,14 @@ export function Navigation() {
           </Link>
         </li>
       ))}
+      <li>
+        <a
+          href={siteConfig.shopUrl}
+          className="text-[13px] font-semibold tracking-[0.02em] text-foreground transition-colors hover:text-birch-deep"
+        >
+          Shop
+        </a>
+      </li>
     </ul>
   );
 }

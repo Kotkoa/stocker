@@ -34,8 +34,9 @@ const developerSocials = [
 
 const footerLinks = {
   explore: [
-    { label: "Products", href: "/" },
+    { label: "Products", href: "/#gallery" },
     { label: "About", href: "/about" },
+    { label: "Shop", href: siteConfig.shopUrl, external: true },
   ],
   social: socialLinks.map((link) => ({
     label: link.name,
@@ -73,6 +74,17 @@ export function Footer() {
                 </a>
               ))}
             </div>
+            <p className="mt-4 text-xs text-muted">
+              Built by{" "}
+              <a
+                href="https://github.com/Kotkoa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-background/55 transition-colors hover:text-background"
+              >
+                Andriy Kotko
+              </a>
+            </p>
           </div>
 
           <div className="flex gap-16">
@@ -83,12 +95,21 @@ export function Footer() {
               <ul className="mt-4 flex flex-col gap-3">
                 {footerLinks.explore.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-[13px] text-background/55 transition-colors hover:text-background"
-                    >
-                      {link.label}
-                    </Link>
+                    {"external" in link ? (
+                      <a
+                        href={link.href}
+                        className="text-[13px] text-background/55 transition-colors hover:text-background"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-[13px] text-background/55 transition-colors hover:text-background"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

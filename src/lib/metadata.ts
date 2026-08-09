@@ -17,6 +17,10 @@ export function getOrganizationJsonLd() {
 }
 
 export function getProductJsonLd(product: Product) {
+  const primaryOfferUrl =
+    product.marketplaceLinks.find((link) => link.marketplace === "shopify")?.url ??
+    product.marketplaceLinks[0]?.url
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -34,7 +38,7 @@ export function getProductJsonLd(product: Product) {
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       offerCount: product.marketplaceLinks.length,
-      url: product.marketplaceLinks[0]?.url,
+      url: primaryOfferUrl,
     },
   }
 }

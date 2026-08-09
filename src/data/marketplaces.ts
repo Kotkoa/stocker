@@ -1,6 +1,6 @@
-import { socialLinks } from "@/data/site";
+import { siteConfig, socialLinks } from "@/data/site";
 
-export type MarketplaceId = "etsy" | "adobe-stock" | "shutterstock" | "creative-market" | "fiverr"
+export type MarketplaceId = "shopify" | "adobe-stock" | "shutterstock" | "creative-market" | "fiverr"
 
 export interface Marketplace {
   id: MarketplaceId;
@@ -11,10 +11,10 @@ export interface Marketplace {
 
 export const marketplaces: Marketplace[] = [
   {
-    id: "etsy",
-    name: "Etsy",
-    url: socialLinks.etsy,
-    icon: "/icons/etsy.svg",
+    id: "shopify",
+    name: "Kotkoa Shop",
+    url: siteConfig.shopUrl,
+    icon: "/icons/shopify.svg",
   },
   {
     id: "adobe-stock",

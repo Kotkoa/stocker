@@ -4,10 +4,11 @@ import { useAtom } from "jotai";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
+import { siteConfig } from "@/data/site";
 import { mobileMenuOpenAtom } from "@/store/ui";
 
 const navLinks = [
-  { href: "/", label: "Products" },
+  { href: "/#gallery", label: "Products" },
   { href: "/about", label: "About" },
 ] as const;
 
@@ -92,6 +93,13 @@ export function MobileMenu() {
             {link.label}
           </Link>
         ))}
+        <a
+          href={siteConfig.shopUrl}
+          onClick={closeMenu}
+          className="font-serif text-2xl font-medium text-foreground"
+        >
+          Shop
+        </a>
       </nav>
 
       <div className="absolute bottom-0 left-0 right-0 border-t border-border px-[clamp(20px,4vw,40px)] py-6">

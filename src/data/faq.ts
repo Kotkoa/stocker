@@ -17,7 +17,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Where can I buy Kotkoa Studio assets?",
     answer:
-      "Our illustrations and photography are distributed across many stock platforms. We link directly to 5 of them — Etsy, Adobe Stock, Shutterstock, Creative Market, and Fiverr — from each product page. Pricing and licensing terms are set on each marketplace.",
+      "Selected products are available directly from our official shop at shop.kotkoa.com. Some assets are also available on Adobe Stock, Shutterstock, Creative Market, and Fiverr from each product page. Pricing and licensing terms are shown on the platform where you purchase.",
   },
   {
     question: "Can I use the assets for commercial projects?",

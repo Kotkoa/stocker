@@ -1,3 +1,5 @@
+import { siteConfig } from "@/data/site"
+
 export interface AboutHero {
   heading: string
   subheading: string
@@ -56,7 +58,7 @@ export const aboutCTA: AboutCTA = {
   description:
     "Browse our latest collections of watercolor illustrations, patterns, and design resources.",
   buttonText: "Visit Our Shop",
-  buttonHref: "https://creativemarket.com/Kotkoa",
+  buttonHref: siteConfig.shopUrl,
 }
 
 export const socialLinks: SocialLink[] = [

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { siteConfig } from "@/data/site";
 
 const links = [
   { href: "/#gallery", label: "Products" },
@@ -13,20 +12,13 @@ export function Navigation() {
         <li key={link.href}>
           <Link
             href={link.href}
+            prefetch={false}
             className="text-[13px] tracking-[0.02em] text-muted transition-colors hover:text-foreground"
           >
             {link.label}
           </Link>
         </li>
       ))}
-      <li>
-        <a
-          href={siteConfig.shopUrl}
-          className="text-[13px] font-semibold tracking-[0.02em] text-foreground transition-colors hover:text-birch-deep"
-        >
-          Shop
-        </a>
-      </li>
     </ul>
   );
 }

@@ -14,7 +14,12 @@ interface TrackedLinkProps {
 
 export function TrackedLink({ href, event, params, className, children }: TrackedLinkProps) {
   return (
-    <Link href={href} className={className} onClick={() => trackEvent(event, params)}>
+    <Link
+      href={href}
+      prefetch={false}
+      className={className}
+      onClick={() => trackEvent(event, params)}
+    >
       {children}
     </Link>
   )

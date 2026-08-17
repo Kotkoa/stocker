@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     template: `%s | ${siteConfig.name}`,
-    default: siteConfig.name,
+    default: siteConfig.seoTitle,
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: siteConfig.name,
+    title: siteConfig.seoTitle,
     description: siteConfig.description,
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.seoTitle,
     description: siteConfig.description,
     images: [
       {

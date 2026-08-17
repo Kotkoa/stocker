@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { MarketplaceLinks } from "@/components/layout/MarketplaceLinks";
 import { siteConfig } from "@/data/site";
 import { mobileMenuOpenAtom } from "@/store/ui";
+import { trackEvent } from "@/lib/analytics";
 
 const navLinks = [
   { href: "/#gallery", label: "Products" },
@@ -87,6 +88,7 @@ export function MobileMenu() {
           <Link
             key={link.href}
             href={link.href}
+            prefetch={false}
             onClick={closeMenu}
             className="font-serif text-2xl font-medium text-foreground"
           >
@@ -95,8 +97,13 @@ export function MobileMenu() {
         ))}
         <a
           href={siteConfig.shopUrl}
-          onClick={closeMenu}
-          className="font-serif text-2xl font-medium text-foreground"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            trackEvent("shop_cta_click", { location: "mobile_menu" });
+            closeMenu();
+          }}
+          className="mt-2 inline-flex min-h-12 w-fit items-center justify-center rounded-full border border-rose bg-rose px-6 py-3 text-sm font-semibold tracking-[0.02em] text-foreground transition-all duration-350 ease-warm hover:border-sage hover:bg-sage focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-foreground"
         >
           Shop
         </a>

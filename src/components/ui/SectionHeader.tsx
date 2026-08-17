@@ -26,7 +26,9 @@ export function SectionHeader({
         {title}
       </h2>
       {deck && (
-        <p className="mt-5 text-base leading-[1.8] text-muted max-w-[520px]">
+        <p
+          className={`mt-5 max-w-[520px] text-base leading-[1.8] text-muted${centered ? " mx-auto" : ""}`}
+        >
           {deck}
         </p>
       )}

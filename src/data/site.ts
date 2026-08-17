@@ -1,7 +1,8 @@
 export const siteConfig = {
   name: "Kotkoa Studio",
+  seoTitle: "Botanical Art, Home Decor & Digital Assets | Kotkoa Studio",
   description:
-    "Creative design studio by Andrey & Olesia specializing in watercolor illustrations, floral patterns, photo bundles, and mockups for digital and print projects.",
+    "Kotkoa is an independent studio by Andrey & Olesia creating botanical home decor, watercolor illustrations, patterns, photo bundles, and digital design assets.",
   url: "https://kotkoa.com",
   shopUrl: "https://shop.kotkoa.com",
   authors: [{ name: "Kotkoa Studio" }],

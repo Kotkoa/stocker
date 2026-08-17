@@ -15,9 +15,14 @@ export const faqItems: FaqItem[] = [
       "Most illustrations and motifs are delivered as high-resolution transparent PNG files, with seamless patterns also available as JPG. Vector and layered formats are provided where relevant. Each product page lists the exact formats included.",
   },
   {
-    question: "Where can I buy Kotkoa Studio assets?",
+    question: "What can I find at shop.kotkoa.com?",
     answer:
-      "Selected products are available directly from our official shop at shop.kotkoa.com. Some assets are also available on Adobe Stock, Shutterstock, Creative Market, and Fiverr from each product page. Pricing and licensing terms are shown on the platform where you purchase.",
+      "Shop.kotkoa.com is our official Shopify-powered store for botanical products created from original Kotkoa artwork. It includes print-on-demand home and lifestyle pieces such as pillow covers, table linens, bags, wrapping paper, and wall art, alongside digital botanical collections for creative projects. Shopify provides the storefront and secure checkout, while our POD orders are produced and fulfilled through Printify. Selected digital assets are also available on Adobe Stock, Shutterstock, Creative Market, and Fiverr.",
+  },
+  {
+    question: "What is the difference between POD and digital products?",
+    answer:
+      "Our print-on-demand products are made after an order is placed and fulfilled through Printify's network of production partners. The selected partner prints, packs, and ships the item to the delivery address entered at Shopify checkout. This approach helps us offer more designs without producing unnecessary stock. Digital products are delivered electronically, require no shipping, and can be used according to the license stated on their product page. Buying a physical product does not include the digital artwork or grant reproduction rights.",
   },
   {
     question: "Can I use the assets for commercial projects?",

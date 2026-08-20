@@ -127,6 +127,10 @@ export const products: Product[] = [
     images: ["/images/products/provence-lavender/cover.jpg"],
     marketplaceLinks: [
       {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/lavender-provence?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+      {
         marketplace: "creative-market",
         url: "https://creativemarket.com/Kotkoa/5863521-Provence-Lavender.-Flower-set.",
       },
@@ -193,11 +197,107 @@ export const products: Product[] = [
     images: ["/images/products/sweet-roses-and-hydrangeas/cover.jpg"],
     marketplaceLinks: [
       {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/sweet-rose-hydrangea?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+      {
         marketplace: "creative-market",
         url: "https://creativemarket.com/Kotkoa/5689009-Sweet-Roses-and-Hydrangeas",
       },
     ],
     featured: false,
     dateAdded: "2021-01-15",
+  },
+  {
+    slug: "eucalyptus-clipart-collection",
+    title: "Eucalyptus Branch, Frame & Pattern. Botanical Clipart Collection",
+    description:
+      "Hand-painted eucalyptus branches, frames, and seamless patterns in watercolor, line art, and gold styles — perfect for branding, invitations, and packaging design.",
+    category: "watercolor",
+    tags: ["eucalyptus", "clipart", "botanical", "watercolor", "png"],
+    coverImage: "/images/products/eucalyptus-clipart-collection/cover.jpg",
+    images: [
+      "/images/products/eucalyptus-clipart-collection/cover.jpg",
+      "/images/products/eucalyptus-clipart-collection/preview-1.jpg",
+      "/images/products/eucalyptus-clipart-collection/preview-2.jpg",
+      "/images/products/eucalyptus-clipart-collection/preview-3.jpg",
+      "/images/products/eucalyptus-clipart-collection/preview-4.jpg",
+      "/images/products/eucalyptus-clipart-collection/preview-5.jpg",
+    ],
+    marketplaceLinks: [
+      {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/eucalyptus-branch-frame-pattern?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+    ],
+    featured: true,
+    dateAdded: "2026-08-20",
+  },
+  {
+    slug: "olive-clipart-collection",
+    title: "Olive Branch, Frame & Pattern. Botanical Clipart Collection",
+    description:
+      "Hand-painted olive branches, frames, and seamless patterns in watercolor, line art, and gold styles — ideal for wedding stationery, branding, and product packaging.",
+    category: "watercolor",
+    tags: ["olive", "clipart", "botanical", "watercolor", "png"],
+    coverImage: "/images/products/olive-clipart-collection/cover.jpg",
+    images: [
+      "/images/products/olive-clipart-collection/cover.jpg",
+      "/images/products/olive-clipart-collection/preview-1.jpg",
+      "/images/products/olive-clipart-collection/preview-2.jpg",
+      "/images/products/olive-clipart-collection/preview-3.jpg",
+      "/images/products/olive-clipart-collection/preview-4.jpg",
+      "/images/products/olive-clipart-collection/preview-5.jpg",
+    ],
+    marketplaceLinks: [
+      {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/olive-branch-frame-pattern?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+    ],
+    featured: true,
+    dateAdded: "2026-08-20",
+  },
+  {
+    slug: "lavender-fields-photo-collection",
+    title: "Lavender Fields. Digital Photo Collection",
+    description:
+      "21 high-resolution photographs capturing lavender fields in soft morning light and warm Provence sunsets — a calm, Mediterranean-inspired stock photo set.",
+    category: "photo-bundle",
+    tags: ["lavender", "photography", "provence", "stock-photos", "digital-download"],
+    coverImage: "/images/products/lavender-fields-photo-collection/cover.jpg",
+    images: [
+      "/images/products/lavender-fields-photo-collection/cover.jpg",
+      "/images/products/lavender-fields-photo-collection/preview-1.jpg",
+    ],
+    marketplaceLinks: [
+      {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/lavender-fields-photos?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+    ],
+    featured: true,
+    dateAdded: "2026-08-20",
+  },
+  {
+    slug: "lavender-oil-distillation-photos",
+    title: "Lavender Oil Distillation. Digital Photo Collection",
+    description:
+      "15 atmospheric photographs of lavender oil distillation — copper stills, essential oil bottles, and fresh lavender in warm, rustic Provence tones.",
+    category: "photo-bundle",
+    tags: ["lavender", "photography", "essential-oil", "stock-photos", "digital-download"],
+    coverImage: "/images/products/lavender-oil-distillation-photos/cover.jpg",
+    images: [
+      "/images/products/lavender-oil-distillation-photos/cover.jpg",
+      "/images/products/lavender-oil-distillation-photos/preview-1.jpg",
+    ],
+    marketplaceLinks: [
+      {
+        marketplace: "shopify",
+        url: "https://shop.kotkoa.com/products/lavender-oil-distillation-photos?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
+      },
+    ],
+    featured: true,
+    dateAdded: "2026-08-20",
   },
 ]

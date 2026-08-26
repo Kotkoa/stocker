@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# independent local knowledge-base repository (managed from shopify/.git)
+/shopify/
+
 # testing
 /coverage
 

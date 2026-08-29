@@ -23,7 +23,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
       </Link>
 
       <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-2">
-        <ProductImageGallery images={product.images} alt={product.title} />
+        <ProductImageGallery images={product.images} />
 
         <div>
           <Badge>{getCategoryLabel(product.category)}</Badge>

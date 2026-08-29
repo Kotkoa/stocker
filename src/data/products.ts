@@ -10,8 +10,14 @@ export const products: Product[] = [
     tags: ["watercolor", "peonies", "flowers", "botanical", "png"],
     coverImage: "/images/products/watercolour-peonies/cover.jpg",
     images: [
-      "/images/products/watercolour-peonies/cover.jpg",
-      "/images/products/watercolour-peonies/preview-1.jpg",
+      {
+        src: "/images/products/watercolour-peonies/cover.jpg",
+        alt: "Collection of twelve delicate hand-drawn watercolor peony motifs in pink and green tones",
+      },
+      {
+        src: "/images/products/watercolour-peonies/preview-1.jpg",
+        alt: "Watercolor peony motifs arranged to show variety of bloom sizes and petal details",
+      },
     ],
     marketplaceLinks: [
       {
@@ -30,7 +36,12 @@ export const products: Product[] = [
     category: "floral-pattern",
     tags: ["pattern", "floral", "line-art", "vector", "bloom"],
     coverImage: "/images/products/bloom-pattern-and-motifs/cover.jpg",
-    images: ["/images/products/bloom-pattern-and-motifs/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/bloom-pattern-and-motifs/cover.jpg",
+        alt: "Bloom collection with detailed line art floral elements, patterns, and seamless botanical designs",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "creative-market",
@@ -49,9 +60,18 @@ export const products: Product[] = [
     tags: ["paris", "watercolor", "magnolia", "sakura", "eiffel-tower", "frame"],
     coverImage: "/images/products/blooming-paris/cover.jpg",
     images: [
-      "/images/products/blooming-paris/cover.jpg",
-      "/images/products/blooming-paris/preview-1.jpg",
-      "/images/products/blooming-paris/preview-2.jpg",
+      {
+        src: "/images/products/blooming-paris/cover.jpg",
+        alt: "Watercolor illustration of blooming magnolia and sakura trees surrounding the Eiffel Tower in spring",
+      },
+      {
+        src: "/images/products/blooming-paris/preview-1.jpg",
+        alt: "Watercolor motifs including delicate pink magnolia blooms and decorative frames",
+      },
+      {
+        src: "/images/products/blooming-paris/preview-2.jpg",
+        alt: "Spring florals with soft watercolor washes showing various peony and bloom arrangements",
+      },
     ],
     marketplaceLinks: [
       {
@@ -70,7 +90,12 @@ export const products: Product[] = [
     category: "watercolor",
     tags: ["wedding", "invitation", "floral", "custom"],
     coverImage: "/images/products/wedding-invitation/cover.jpg",
-    images: ["/images/products/wedding-invitation/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/wedding-invitation/cover.jpg",
+        alt: "Elegant floral wedding invitation layout with botanical watercolor borders and sample text",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "fiverr",
@@ -88,7 +113,12 @@ export const products: Product[] = [
     category: "photo-bundle",
     tags: ["photo", "avocado", "food", "styled", "lifestyle"],
     coverImage: "/images/products/avocado-photo-bundle/cover.jpg",
-    images: ["/images/products/avocado-photo-bundle/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/avocado-photo-bundle/cover.jpg",
+        alt: "Styled flat lay of fresh cut avocado halves with pit and leaves on neutral background",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "creative-market",
@@ -106,7 +136,12 @@ export const products: Product[] = [
     category: "vintage-pattern",
     tags: ["vintage", "floral", "pattern", "seamless", "botanical"],
     coverImage: "/images/products/vintage-floral-patterns/cover.jpg",
-    images: ["/images/products/vintage-floral-patterns/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/vintage-floral-patterns/cover.jpg",
+        alt: "Vintage botanical floral patterns featuring seamless repeating designs with classic botanical motifs",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "creative-market",
@@ -124,15 +159,28 @@ export const products: Product[] = [
     category: "watercolor",
     tags: ["lavender", "provence", "watercolor", "flowers", "botanical"],
     coverImage: "/images/products/provence-lavender/cover.jpg",
-    images: ["/images/products/provence-lavender/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/provence-lavender/cover.jpg",
+        alt: "Watercolour Provence lavender flower set with stems, bouquets and decorative arrangements",
+      },
+      {
+        src: "/images/products/provence-lavender/preview-1.jpg",
+        alt: "Contact sheet of individual watercolour lavender elements: sprigs, buds, leaves and single stems",
+      },
+      {
+        src: "/images/products/provence-lavender/preview-2.jpg",
+        alt: "Contact sheet of lavender wreaths and floral frames composed from watercolour Provence lavender",
+      },
+      {
+        src: "/images/products/provence-lavender/preview-3.jpg",
+        alt: "Watercolour lavender pattern printed on natural linen fabric in a styled Provence mockup",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "shopify",
         url: "https://shop.kotkoa.com/products/lavender-provence?utm_source=kotkoa-site&utm_medium=referral&utm_campaign=digital-2026-08",
-      },
-      {
-        marketplace: "creative-market",
-        url: "https://creativemarket.com/Kotkoa/5863521-Provence-Lavender.-Flower-set.",
       },
     ],
     featured: true,
@@ -147,8 +195,14 @@ export const products: Product[] = [
     tags: ["mockup", "styled-photo", "presentation", "lifestyle"],
     coverImage: "/images/products/styled-photo-and-mockups/cover.jpg",
     images: [
-      "/images/products/styled-photo-and-mockups/cover.jpg",
-      "/images/products/styled-photo-and-mockups/preview-1.jpg",
+      {
+        src: "/images/products/styled-photo-and-mockups/cover.jpg",
+        alt: "Styled flat lay mockup with design prints arranged on neutral linen texture with natural light",
+      },
+      {
+        src: "/images/products/styled-photo-and-mockups/preview-1.jpg",
+        alt: "Lifestyle mockup showing printed designs displayed in styled home interior setting",
+      },
     ],
     marketplaceLinks: [
       {
@@ -168,14 +222,38 @@ export const products: Product[] = [
     tags: ["photo", "lavender", "provence", "nature", "stock-photo"],
     coverImage: "/images/products/lavender-photo-bundle/cover.jpg",
     images: [
-      "/images/products/lavender-photo-bundle/cover.jpg",
-      "/images/products/lavender-photo-bundle/preview-1.jpg",
-      "/images/products/lavender-photo-bundle/preview-2.jpg",
-      "/images/products/lavender-photo-bundle/preview-3.jpg",
-      "/images/products/lavender-photo-bundle/preview-4.jpg",
-      "/images/products/lavender-photo-bundle/preview-5.jpg",
-      "/images/products/lavender-photo-bundle/preview-6.jpg",
-      "/images/products/lavender-photo-bundle/preview-7.jpg",
+      {
+        src: "/images/products/lavender-photo-bundle/cover.jpg",
+        alt: "Wide field of purple lavender flowers in soft morning light with rolling hills",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-1.jpg",
+        alt: "Close-up shot of lavender flower spikes with dewdrops and soft bokeh background",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-2.jpg",
+        alt: "Golden hour lavender field with warm Provence sunlight creating purple and pink tones",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-3.jpg",
+        alt: "Harvested lavender bundles tied with twine resting on rustic wooden table",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-4.jpg",
+        alt: "Detailed lavender blooms showcasing individual purple petals and natural texture",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-5.jpg",
+        alt: "Atmospheric Provence landscape with lavender field rows leading to distant hills",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-6.jpg",
+        alt: "Lavender flowers backlit by sunset creating silhouettes and golden highlights",
+      },
+      {
+        src: "/images/products/lavender-photo-bundle/preview-7.jpg",
+        alt: "Mixed lavender varieties planted together showing different heights and bloom stages",
+      },
     ],
     marketplaceLinks: [
       {
@@ -194,7 +272,12 @@ export const products: Product[] = [
     category: "watercolor",
     tags: ["watercolor", "roses", "hydrangeas", "flowers", "botanical"],
     coverImage: "/images/products/sweet-roses-and-hydrangeas/cover.jpg",
-    images: ["/images/products/sweet-roses-and-hydrangeas/cover.jpg"],
+    images: [
+      {
+        src: "/images/products/sweet-roses-and-hydrangeas/cover.jpg",
+        alt: "Watercolor illustration of lush roses and hydrangeas in soft pink and blue hues",
+      },
+    ],
     marketplaceLinks: [
       {
         marketplace: "shopify",
@@ -217,12 +300,30 @@ export const products: Product[] = [
     tags: ["eucalyptus", "clipart", "botanical", "watercolor", "png"],
     coverImage: "/images/products/eucalyptus-clipart-collection/cover.jpg",
     images: [
-      "/images/products/eucalyptus-clipart-collection/cover.jpg",
-      "/images/products/eucalyptus-clipart-collection/preview-1.jpg",
-      "/images/products/eucalyptus-clipart-collection/preview-2.jpg",
-      "/images/products/eucalyptus-clipart-collection/preview-3.jpg",
-      "/images/products/eucalyptus-clipart-collection/preview-4.jpg",
-      "/images/products/eucalyptus-clipart-collection/preview-5.jpg",
+      {
+        src: "/images/products/eucalyptus-clipart-collection/cover.jpg",
+        alt: "Eucalyptus botanical collection featuring hand-painted branches, frames, and seamless patterns",
+      },
+      {
+        src: "/images/products/eucalyptus-clipart-collection/preview-1.jpg",
+        alt: "Watercolor eucalyptus branches with soft green leaves and natural flowing stems",
+      },
+      {
+        src: "/images/products/eucalyptus-clipart-collection/preview-2.jpg",
+        alt: "Decorative eucalyptus frames and borders with gold accents on white background",
+      },
+      {
+        src: "/images/products/eucalyptus-clipart-collection/preview-3.jpg",
+        alt: "Seamless eucalyptus pattern with repeating leaf motifs in watercolor style",
+      },
+      {
+        src: "/images/products/eucalyptus-clipart-collection/preview-4.jpg",
+        alt: "Line art eucalyptus elements showing detailed leaf vein work and botanical precision",
+      },
+      {
+        src: "/images/products/eucalyptus-clipart-collection/preview-5.jpg",
+        alt: "Mixed eucalyptus design elements combining watercolor, line art, and gold foil styles",
+      },
     ],
     marketplaceLinks: [
       {
@@ -242,12 +343,30 @@ export const products: Product[] = [
     tags: ["olive", "clipart", "botanical", "watercolor", "png"],
     coverImage: "/images/products/olive-clipart-collection/cover.jpg",
     images: [
-      "/images/products/olive-clipart-collection/cover.jpg",
-      "/images/products/olive-clipart-collection/preview-1.jpg",
-      "/images/products/olive-clipart-collection/preview-2.jpg",
-      "/images/products/olive-clipart-collection/preview-3.jpg",
-      "/images/products/olive-clipart-collection/preview-4.jpg",
-      "/images/products/olive-clipart-collection/preview-5.jpg",
+      {
+        src: "/images/products/olive-clipart-collection/cover.jpg",
+        alt: "Olive botanical collection featuring hand-painted branches, decorative frames, and patterns",
+      },
+      {
+        src: "/images/products/olive-clipart-collection/preview-1.jpg",
+        alt: "Watercolor olive branches with realistic sage-green leaves and natural branch shapes",
+      },
+      {
+        src: "/images/products/olive-clipart-collection/preview-2.jpg",
+        alt: "Elegant olive frames and borders with gold accents perfect for wedding designs",
+      },
+      {
+        src: "/images/products/olive-clipart-collection/preview-3.jpg",
+        alt: "Seamless olive leaf pattern with repeating botanical elements in muted green tones",
+      },
+      {
+        src: "/images/products/olive-clipart-collection/preview-4.jpg",
+        alt: "Detailed line art olive branches showing fine leaf structure and branch anatomy",
+      },
+      {
+        src: "/images/products/olive-clipart-collection/preview-5.jpg",
+        alt: "Coordinated olive design elements in watercolor, line art, and metallic gold styles",
+      },
     ],
     marketplaceLinks: [
       {
@@ -267,8 +386,14 @@ export const products: Product[] = [
     tags: ["lavender", "photography", "provence", "stock-photos", "digital-download"],
     coverImage: "/images/products/lavender-fields-photo-collection/cover.jpg",
     images: [
-      "/images/products/lavender-fields-photo-collection/cover.jpg",
-      "/images/products/lavender-fields-photo-collection/preview-1.jpg",
+      {
+        src: "/images/products/lavender-fields-photo-collection/cover.jpg",
+        alt: "Panoramic lavender field at golden hour with rolling hills and purple bloom landscape",
+      },
+      {
+        src: "/images/products/lavender-fields-photo-collection/preview-1.jpg",
+        alt: "Soft-focused lavender field in morning mist with delicate bokeh lighting effects",
+      },
     ],
     marketplaceLinks: [
       {
@@ -288,8 +413,14 @@ export const products: Product[] = [
     tags: ["lavender", "photography", "essential-oil", "stock-photos", "digital-download"],
     coverImage: "/images/products/lavender-oil-distillation-photos/cover.jpg",
     images: [
-      "/images/products/lavender-oil-distillation-photos/cover.jpg",
-      "/images/products/lavender-oil-distillation-photos/preview-1.jpg",
+      {
+        src: "/images/products/lavender-oil-distillation-photos/cover.jpg",
+        alt: "Rustic copper distillation still with fresh lavender stems and essential oil bottles",
+      },
+      {
+        src: "/images/products/lavender-oil-distillation-photos/preview-1.jpg",
+        alt: "Close-up of amber essential oil bottle with lavender flowers and natural lighting",
+      },
     ],
     marketplaceLinks: [
       {

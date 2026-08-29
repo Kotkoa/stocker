@@ -24,7 +24,7 @@ export async function generateMetadata({
     return { title: "Product not found" };
   }
 
-  const ogImage = product.images[0] ?? product.coverImage;
+  const ogImage = product.images[0]?.src ?? product.coverImage;
 
   return {
     title: product.title,

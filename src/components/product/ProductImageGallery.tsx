@@ -1,21 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import type { ProductImage } from "@/types/product";
 
 type ProductImageGalleryProps = {
-  images: string[];
-  alt: string;
+  images: ProductImage[];
 };
 
-export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
+export function ProductImageGallery({ images }: ProductImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="flex flex-col gap-4">
       <div className="relative aspect-4/3 overflow-hidden rounded-[14px] bg-bg-alt">
         <img
-          src={images[activeIndex]}
-          alt={alt}
+          src={images[activeIndex].src}
+          alt={images[activeIndex].alt}
           className="h-full w-full object-cover"
         />
       </div>
@@ -23,7 +23,7 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
         <div className="flex gap-2 overflow-x-auto">
           {images.map((image, index) => (
             <button
-              key={image}
+              key={image.src}
               type="button"
               onClick={() => setActiveIndex(index)}
               aria-current={index === activeIndex ? "true" : undefined}
@@ -34,8 +34,8 @@ export function ProductImageGallery({ images, alt }: ProductImageGalleryProps) {
               }`}
             >
               <img
-                src={image}
-                alt={`${alt} — ${index + 1}`}
+                src={image.src}
+                alt={image.alt}
                 className="h-20 w-20 object-cover"
               />
             </button>

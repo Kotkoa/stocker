@@ -4,6 +4,11 @@ export type { MarketplaceId } from "@/data/marketplaces"
 
 export type ProductCategory = "watercolor" | "floral-pattern" | "photo-bundle" | "mockup" | "vintage-pattern"
 
+export interface ProductImage {
+  src: string
+  alt: string
+}
+
 export interface Product {
   slug: string
   title: string
@@ -11,7 +16,7 @@ export interface Product {
   category: ProductCategory
   tags: string[]
   coverImage: string
-  images: string[]
+  images: ProductImage[]
   marketplaceLinks: MarketplaceLink[]
   featured: boolean
   dateAdded: string

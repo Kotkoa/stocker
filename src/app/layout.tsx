@@ -64,6 +64,7 @@ export const metadata: Metadata = {
   other: {
     "theme-color": "#3D3833",
     "msapplication-TileColor": "#3D3833",
+    "p:domain_verify": "3a950996a22bd601feddb00991d87cd8",
   },
   icons: {
     icon: "/favicon.ico?v2",

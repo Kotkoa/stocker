@@ -78,3 +78,16 @@ Creative studio portfolio for kotkoa.com. Migrating from Tumblr to Next.js 16+ s
 3. Before submitting a site change, run `npm run lint` and `npm run build`.
 4. Validate rendered static output with `npx serve out`; `output: "export"` means `npm start` is not a production preview command.
 5. Keep credentials and machine-local Claude/analytics configuration out of Git. Build-time public configuration uses `NEXT_PUBLIC_*` variables only.
+
+## Google Analytics 4 Access
+
+- Service account key: `.config/kotkoa-com-analytics-78bb08f2c97e.json`
+- GA4 properties:
+  - `550786581` — shop.kotkoa.com (Shopify store; `/collections/*`, `/products/*` paths)
+  - `262803032` — www.kotkoa.com (Next.js portfolio site; `/`, `/about` paths)
+- Run analysis via the `google-analytics` skill scripts:
+  ```bash
+  export GOOGLE_APPLICATION_CREDENTIALS=".config/kotkoa-com-analytics-78bb08f2c97e.json"
+  GOOGLE_ANALYTICS_PROPERTY_ID=550786581 python3 ~/.agents/skills/google-analytics/scripts/analyze.py --analysis-type overview --compare --days 4
+  ```
+- Known skill bug (fixed locally in `~/.agents/skills/google-analytics/scripts/ga_client.py`): `run_report` must request `metric_aggregations=[MetricAggregation.TOTAL]` and always set `result["totals"]`, otherwise `analyze.py --compare` raises `KeyError: 'totals'`.
